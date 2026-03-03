@@ -1,0 +1,361 @@
+.hero {
+  height: 100vh;
+  min-height: 700px;
+  background: linear-gradient(rgba(15, 28, 46, 0.8), rgba(15, 28, 46, 0.9)), 
+              radial-gradient(circle at center, var(--secondary-navy), var(--dark-bg));
+  display: flex;
+  align-items: center;
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  text-align: center;
+  max-width: 900px;
+  z-index: 2;
+}
+
+.hero-tagline {
+  font-family: var(--font-subtitle);
+  color: var(--accent-gold);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: 4.5rem;
+  color: var(--accent-gold);
+  line-height: 1.1;
+  margin-bottom: 30px;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 40px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-btns {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.btn {
+  padding: 15px 35px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-family: var(--font-subtitle);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+
+.btn-gold {
+  background-color: var(--accent-gold);
+  color: var(--white);
+  box-shadow: 0 10px 20px rgba(201, 169, 97, 0.3);
+}
+
+.btn-gold:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(201, 169, 97, 0.4);
+}
+
+.btn-outline {
+  border: 2px solid var(--white);
+  color: var(--white);
+}
+
+.btn-outline:hover {
+  background-color: var(--white);
+  color: var(--primary-navy);
+}
+
+.hero-verse {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.verse-line {
+  width: 50px;
+  height: 2px;
+  background-color: var(--accent-gold);
+}
+
+.hero-verse p {
+  font-family: var(--font-title);
+  font-style: italic;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.hero-verse span {
+  display: block;
+  font-size: 0.9rem;
+  margin-top: 5px;
+  font-style: normal;
+  color: var(--accent-gold);
+}
+
+/* Stats Section */
+.stats {
+  background-color: var(--white);
+  padding: 60px 0;
+  margin-top: -50px;
+  position: relative;
+  z-index: 10;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  color: var(--accent-gold);
+  margin-bottom: 5px;
+}
+
+.stat-label {
+  font-family: var(--font-subtitle);
+  color: var(--primary-navy);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+/* Domains Section */
+.domains {
+  background-color: var(--light-bg);
+}
+
+.domains-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.domain-card {
+  background-color: var(--white);
+  padding: 40px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.domain-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-medium);
+}
+
+.domain-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.domain-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.domain-card p {
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+.domain-border {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 4px;
+  background-color: var(--accent-gold);
+  transition: var(--transition);
+}
+
+.domain-card:hover .domain-border {
+  width: 100%;
+}
+
+/* Pastor Section */
+.pastor {
+  background-color: var(--primary-navy);
+  color: var(--white);
+  overflow: hidden;
+}
+
+.pastor-container {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+
+.pastor-image-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.pastor-avatar {
+  width: 300px;
+  height: 300px;
+  position: relative;
+}
+
+.avatar-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--secondary-navy), var(--dark-bg));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+  font-family: var(--font-title);
+  color: var(--accent-gold);
+  border: 4px solid var(--accent-gold);
+}
+
+.avatar-ring {
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  right: -15px;
+  bottom: -15px;
+  border: 2px dashed var(--accent-gold);
+  border-radius: 50%;
+  animation: rotateSlow 20s linear infinite;
+  opacity: 0.5;
+}
+
+.pastor-content {
+  flex: 1.5;
+}
+
+.pastor-tag {
+  color: var(--accent-gold);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.pastor-content h3 {
+  color: var(--white);
+  font-size: 2.5rem;
+  margin-bottom: 5px;
+}
+
+.pastor-title {
+  font-family: var(--font-subtitle);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+}
+
+.pastor-divider {
+  width: 60px;
+  height: 3px;
+  background-color: var(--accent-gold);
+  margin-bottom: 30px;
+}
+
+.pastor-quote {
+  font-family: var(--font-title);
+  font-style: italic;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* CTA Section */
+.cta {
+  background: linear-gradient(rgba(30, 58, 95, 0.9), rgba(30, 58, 95, 0.9)),
+              url('https://picsum.photos/seed/haiti/1920/600');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: var(--white);
+}
+
+.cta-content h2 {
+  color: var(--white);
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.cta-content p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+@media (max-width: 1024px) {
+  .hero h1 { font-size: 3.5rem; }
+  .pastor-container { gap: 40px; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .domains-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .hero { min-height: 600px; }
+  .hero h1 { font-size: 2.5rem; }
+  .hero-tagline { font-size: 0.85rem; letter-spacing: 2px; }
+  .hero-subtitle { font-size: 1rem; }
+  .hero-btns { flex-direction: column; align-items: center; gap: 12px; }
+  .hero-btns .btn { width: 100%; max-width: 280px; text-align: center; }
+  .hero-verse p { font-size: 0.95rem; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .stat-number { font-size: 2rem; }
+  .domains-grid { grid-template-columns: 1fr; }
+  .domain-card { padding: 30px 25px; }
+  .pastor-container { flex-direction: column; text-align: center; gap: 30px; }
+  .pastor-image-wrapper { justify-content: center; }
+  .pastor-divider { margin-left: auto; margin-right: auto; }
+  .pastor-content h3 { font-size: 2rem; }
+  .pastor-quote { font-size: 1.1rem; }
+  .cta-content h2 { font-size: 2rem; }
+  .cta-content p { font-size: 1rem; }
+}
+
+@media (max-width: 480px) {
+  .hero h1 { font-size: 2rem; }
+  .hero-tagline { font-size: 0.75rem; }
+  .hero-subtitle { font-size: 0.9rem; }
+  .hero-btns .btn { max-width: 100%; }
+  .stats { margin-top: -20px; padding: 40px 0; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; }
+  .stat-number { font-size: 1.7rem; }
+  .stat-label { font-size: 0.7rem; }
+  .domain-card { padding: 25px 20px; }
+  .domain-card h3 { font-size: 1.3rem; }
+  .pastor-avatar { width: 200px; height: 200px; }
+  .avatar-placeholder { font-size: 3.5rem; }
+  .pastor-content h3 { font-size: 1.7rem; }
+  .pastor-quote { font-size: 1rem; }
+  .cta-content h2 { font-size: 1.6rem; }
+  .cta-content p { font-size: 0.9rem; }
+}
