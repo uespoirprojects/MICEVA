@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import logo from '../MICEVA.png';
 import './Navigation.css';
 
 const Navigation = () => {
@@ -19,7 +20,6 @@ const Navigation = () => {
     setMobileMenuOpen(false);
   }, [location]);
 
-  // Bloquer le scroll quand le menu est ouvert
   useEffect(() => {
     if (mobileMenuOpen) {
       document.body.style.overflow = 'hidden';
@@ -31,7 +31,6 @@ const Navigation = () => {
 
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
-      {/* Overlay — clic en dehors ferme le menu */}
       {mobileMenuOpen && (
         <div
           className="nav-overlay"
@@ -40,9 +39,16 @@ const Navigation = () => {
       )}
 
       <div className="container nav-container">
+
+        {/* Logo */}
         <Link to="/" className="logo">
-          <span className="logo-main">MICEVA</span>
-          <span className="logo-sub">Vision en Action</span>
+          <div className="logo-img-wrapper">
+            <img src={logo} alt="MICEVA Logo" className="logo-img" />
+          </div>
+          <div className="logo-text">
+            <span className="logo-main">MICEVA</span>
+            <span className="logo-sub">Chapelle Évangélique Vision en Action</span>
+          </div>
         </Link>
 
         <div className={`nav-links ${mobileMenuOpen ? 'active' : ''}`}>
@@ -64,6 +70,7 @@ const Navigation = () => {
             <span></span>
           </button>
         </div>
+
       </div>
     </nav>
   );
