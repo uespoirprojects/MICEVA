@@ -4,13 +4,13 @@
   left: 0;
   width: 100%;
   z-index: 1100;
-  padding: 20px 0;
+  padding: 14px 0;
   transition: var(--transition);
   background: transparent;
 }
 
 .navbar.scrolled {
-  padding: 12px 0;
+  padding: 8px 0;
   background: var(--white);
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
@@ -21,7 +21,39 @@
   align-items: center;
 }
 
+/* ─── Logo ─────────────────────────────────────── */
 .logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.logo-img-wrapper {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  /* Subtle ring that adapts to scroll state */
+  box-shadow: 0 0 0 2px rgba(201, 169, 97, 0.5);
+  transition: var(--transition);
+}
+
+.navbar.scrolled .logo-img-wrapper {
+  box-shadow: 0 0 0 2px var(--accent-gold);
+}
+
+.logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  /* The original image has a black bg — we crop it cleanly */
+  border-radius: 50%;
+}
+
+.logo-text {
   display: flex;
   flex-direction: column;
 }
@@ -30,23 +62,26 @@
   font-family: var(--font-title);
   font-size: 1.8rem;
   font-weight: 700;
-  color: var(--primary-navy);
+  color: var(--white);
   line-height: 1;
+  transition: var(--transition);
 }
 
-.navbar:not(.scrolled) .logo-main {
-  color: var(--white);
+.navbar.scrolled .logo-main {
+  color: var(--primary-navy);
 }
 
 .logo-sub {
   font-family: var(--font-subtitle);
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   color: var(--accent-gold);
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
   font-weight: 600;
+  margin-top: 2px;
 }
 
+/* ─── Nav Links ─────────────────────────────────── */
 .nav-links {
   display: flex;
   gap: 30px;
@@ -57,12 +92,13 @@
   font-family: var(--font-subtitle);
   font-weight: 500;
   font-size: 0.95rem;
-  color: var(--primary-navy);
+  color: var(--white);
   position: relative;
+  transition: var(--transition);
 }
 
-.navbar:not(.scrolled) .nav-links a {
-  color: var(--white);
+.navbar.scrolled .nav-links a {
+  color: var(--primary-navy);
 }
 
 .nav-links a::after {
@@ -81,6 +117,7 @@
   width: 100%;
 }
 
+/* ─── Donate Button ─────────────────────────────── */
 .btn-donate {
   background-color: var(--accent-gold);
   color: var(--white);
@@ -89,17 +126,20 @@
   font-weight: 600;
   font-size: 0.9rem;
   box-shadow: 0 4px 15px rgba(201, 169, 97, 0.3);
+  transition: var(--transition);
+  font-family: var(--font-subtitle);
 }
 
 .btn-donate:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(201, 169, 97, 0.4);
+  box-shadow: 0 6px 20px rgba(201, 169, 97, 0.45);
 }
 
 .btn-donate-mobile {
   display: none;
 }
 
+/* ─── Hamburger ─────────────────────────────────── */
 .menu-toggle {
   display: none;
   flex-direction: column;
@@ -111,15 +151,25 @@
   display: block;
   width: 100%;
   height: 2px;
-  background-color: var(--primary-navy);
-  transition: var(--transition);
-}
-
-.navbar:not(.scrolled) .menu-toggle span {
   background-color: var(--white);
+  transition: var(--transition);
+  border-radius: 2px;
 }
 
-/* Mobile Navigation */
+.navbar.scrolled .menu-toggle span {
+  background-color: var(--primary-navy);
+}
+
+/* ─── Overlay ───────────────────────────────────── */
+.nav-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1098;
+  cursor: pointer;
+}
+
+/* ─── Mobile ────────────────────────────────────── */
 @media (max-width: 1024px) {
   .nav-links {
     position: fixed;
@@ -176,16 +226,14 @@
     font-size: 1rem;
     width: 100%;
     text-align: center;
+    font-family: var(--font-subtitle);
   }
 }
 
-@media (max-width: 480px) {
-  .navbar {
-    padding: 15px 0;
-  }
-
-  .navbar.scrolled {
-    padding: 10px 0;
+@media (max-width: 768px) {
+  .logo-img-wrapper {
+    width: 58px;
+    height: 58px;
   }
 
   .logo-main {
@@ -193,7 +241,35 @@
   }
 
   .logo-sub {
-    font-size: 0.6rem;
+    font-size: 0.58rem;
+    letter-spacing: 1px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px 0;
+  }
+
+  .navbar.scrolled {
+    padding: 8px 0;
+  }
+
+  .logo {
+    gap: 9px;
+  }
+
+  .logo-img-wrapper {
+    width: 50px;
+    height: 50px;
+  }
+
+  .logo-main {
+    font-size: 1.3rem;
+  }
+
+  .logo-sub {
+    display: none;
   }
 
   .nav-links {
@@ -207,12 +283,4 @@
   .menu-toggle {
     width: 26px;
   }
-}
-/* Overlay pour fermer le menu en cliquant dehors */
-.nav-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.4);
-  z-index: 1098;
-  cursor: pointer;
 }

@@ -95,8 +95,8 @@
   opacity: 1;
 }
 
+/* Lucide Search icon on hover */
 .zoom-icon {
-  font-size: 2rem;
   color: var(--white);
 }
 
@@ -118,10 +118,19 @@
   margin-bottom: 10px;
 }
 
+/* Location row with Lucide MapPin */
 .project-location {
+  display: flex;
+  align-items: center;
+  gap: 5px;
   font-size: 0.9rem;
   color: var(--text-light);
   margin-bottom: 15px;
+}
+
+.location-icon {
+  color: var(--accent-gold);
+  flex-shrink: 0;
 }
 
 .project-desc {
