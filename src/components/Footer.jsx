@@ -48,7 +48,7 @@ const Footer = () => {
             </li>
             <li>
               <Phone size={15} strokeWidth={2} className="footer-icon" />
-              +509 3700-0000 / +509 3100-0000
+              +509 3409-2063
             </li>
             <li>
               <Mail size={15} strokeWidth={2} className="footer-icon" />
