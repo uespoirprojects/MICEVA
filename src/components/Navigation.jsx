@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import logo from '../MICEVA.png';
+import logo from '../../src/assets/images/miceva.png';
 import './Navigation.css';
 
 const Navigation = () => {

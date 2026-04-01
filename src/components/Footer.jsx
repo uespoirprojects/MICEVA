@@ -3,6 +3,8 @@ import { MapPin, Phone, Mail, Clock, GraduationCap } from 'lucide-react';
 import './Footer.css';
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="footer">
       <div className="footer-top-line"></div>
@@ -55,10 +57,6 @@ const Footer = () => {
               contact@miceva.org
             </li>
             <li>
-              <Clock size={15} strokeWidth={2} className="footer-icon" />
-              Lun – Ven : 8h00 – 17h00
-            </li>
-            <li>
               <GraduationCap size={15} strokeWidth={2} className="footer-icon" />
               Partenaire : Université Espoir de Calvary Chapel
             </li>
@@ -69,7 +67,7 @@ const Footer = () => {
 
       <div className="footer-bottom">
         <div className="container">
-          <p>&copy; 2026 Mission Chapelle Évangélique Vision en Action (MICEVA). Tous droits réservés.</p>
+          <p>&copy; {currentYear} Mission Chapelle Évangélique Vision en Action (MICEVA). Tous droits réservés.</p>
         </div>
       </div>
     </footer>

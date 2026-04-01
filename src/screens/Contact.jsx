@@ -77,15 +77,6 @@ const Contact = () => {
                     <p>contact@miceva.org</p>
                   </div>
                 </div>
-                <div className="info-item">
-                  <span className="info-icon">
-                    <Clock size={22} strokeWidth={1.8} />
-                  </span>
-                  <div>
-                    <h4>Horaires</h4>
-                    <p>Lundi – Vendredi : 8h00 – 17h00</p>
-                  </div>
-                </div>
               </div>
 
               {/* Partenariat Box */}
@@ -99,12 +90,12 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="info-map-placeholder">
+              {/* <div className="info-map-placeholder">
                 <div className="map-overlay">
                   <MapPin size={15} strokeWidth={2.5} />
                   <span>MICEVA — Aquin, Sud d'Haïti</span>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
 
