@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { MapPin, Search } from 'lucide-react';
+import { MapPin } from 'lucide-react';
 import './Realisations.css';
 
 const Realisations = () => {
@@ -123,9 +123,6 @@ const Realisations = () => {
               <div key={project.id} className="project-card animate-fadeInUp">
                 <div className="project-image" style={{ background: project.color }}>
                   <div className="project-badge">{project.category}</div>
-                  <div className="project-overlay">
-                    <Search size={28} strokeWidth={1.8} className="zoom-icon" />
-                  </div>
                 </div>
                 <div className="project-content">
                   <span className="project-year">{project.year}</span>
