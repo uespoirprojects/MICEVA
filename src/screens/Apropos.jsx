@@ -265,13 +265,13 @@ const Apropos = () => {
             {/*<div className="avatar-ring"></div>*/}
           </div>
           <div className="founder-info">
-            <p className="founder-tag">Le Fondateur</p>
-            <h3>Pasteur Eris Labady</h3>
+            <p className="founder-tag">Fondateurs</p>
+            <h3>Eris & Myriam Labady</h3>
             <p className="founder-bio">
-              Homme de foi et visionnaire, le Pasteur Eris Labady a répondu à l'appel de Dieu en
-              implantant MICEVA à Puits-Salé en 1978. Son leadership est marqué par une volonté
+              Homme et Femme de foi et visionnaire, le couple Eris & Myriam Labady ont répondu à l'appel de Dieu en
+              implantant MICEVA à Puits-Salé en 1978. Leur leadership est marqué par une volonté
               constante d'allier la prédication de la Parole à des actions concrètes sur le terrain.
-              Il croit fermement que le développement spirituel et intellectuel sont complémentaires
+              Ils croient fermement que le développement spirituel et intellectuel sont complémentaires
               pour bâtir une société plus stable et prospère en Haïti.
             </p>
             <div className="founder-divider"></div>

@@ -68,6 +68,16 @@ const Footer = () => {
       <div className="footer-bottom">
         <div className="container">
           <p>&copy; {currentYear} Mission Chapelle Évangélique Vision en Action (MICEVA). Tous droits réservés.</p>
+          <p>
+            Développé par{' '}
+            <a
+              href="https://prowebsa.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <strong>Prowebsa</strong>
+            </a>
+          </p>
         </div>
       </div>
     </footer>
